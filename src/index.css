@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+div.resizable-default-border[data-panel-resizable='true'][data-panel-type='L'] {
+  border-right: 1px solid #e4e4e4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+div.resizable-default-border[data-panel-resizable='true'][data-panel-type='T'] {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+div.resizable-default-border[data-panel-resizable='true'][data-panel-type='B'] {
+  border-top: 1px solid #e4e4e4;
+}
+
+div.resizable-default-border[data-panel-resizable='true'][data-panel-type='R'] {
+  border-left: 1px solid #e4e4e4;
+}
+
+div[data-panel-resizable='false'] {
+  flex: 1;
+}
+
+div.panel-content-container {
+  display: block !important;
+  flex: 1;
+}
+
+div[data-panel-type] {
+  position: relative;
+  display: flex;
+}
+
+.panel-manager-T-handler {
+  position: absolute;
+  bottom: -1px !important;
+  z-index: 111;
+}
+
+.panel-manager-T-handler:active {
+  border-bottom: 2px solid #1890ff;
+}
+
+.panel-manager-T-handler:hover {
+  border-bottom: 2px solid #1890ff;
+}
+
+.panel-manager-B-handler {
+  position: absolute;
+  top: -1px !important;
+  z-index: 111;
+}
+
+.panel-manager-T-handler:active {
+  border-top: 2px solid #1890ff;
+}
+
+.panel-manager-T-handler:hover {
+  border-top: 2px solid #1890ff;
+}
+
+.panel-manager-L-handler {
+  position: absolute;
+  right: -1px !important;
+  z-index: 111;
+}
+
+.panel-manager-L-handler:active {
+  border-right: 2px solid #1890ff;
+}
+
+.panel-manager-L-handler:hover {
+  border-right: 2px solid #1890ff;
+}
+
+.panel-manager-R-handler {
+  position: absolute;
+  left: -1px !important;
+  z-index: 111;
+}
+
+.panel-manager-R-handler:active {
+  border-left: 2px solid #1890ff;
+}
+
+.panel-manager-R-handler:hover {
+  border-left: 2px solid #1890ff;
 }

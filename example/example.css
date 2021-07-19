@@ -1,0 +1,24 @@
+* {
+  font-family: 'GT Walsheim Pro Regular';
+}
+
+.example-panel-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  font-size: 100px;
+  font-family: 'GT Walsheim Pro Regular';
+}
+
+.linear-wipe {
+  text-align: center;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}

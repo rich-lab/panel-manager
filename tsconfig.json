@@ -12,8 +12,10 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "noEmit": false,
+    "jsx": "react",
+    "outDir": "es",
+    "noImplicitAny": false
   },
-  "include": ["./src"]
+  "include": ["./src", "example/main.tsx"],
 }
