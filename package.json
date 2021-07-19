@@ -10,6 +10,11 @@
     "serve": "vite preview",
     "lint": "eslint src/**.tsx src/**.ts --fix"
   },
+  "files": [
+    "dist",
+    "es",
+    "src"
+  ],
   "dependencies": {
     "re-resizable": "^6.9.0",
     "react": "^17.0.2",
