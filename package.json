@@ -1,7 +1,7 @@
 {
   "name": "panel-manager",
   "description": "Provide an easy way to manage your panels.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "module": "es/index.js",
   "main": "panel-manager.cjs.js",
   "scripts": {
