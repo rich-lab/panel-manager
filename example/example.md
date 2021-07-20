@@ -1,8 +1,6 @@
 # A demo of `panel-manager`
 
-`panel-manager` is React Component build for manage your panels.  
-
-`re-resizable` is under the hood.
+`panel-manager` is React Component build for manage your panels. `re-resizable` is under the hood.
 
 ## Feature
 
