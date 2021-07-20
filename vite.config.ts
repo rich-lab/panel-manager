@@ -6,6 +6,7 @@ import MarkdownIt from 'markdown-it';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'panel-manager',
   plugins: [
     reactRefresh(),
     mdPlugin({
