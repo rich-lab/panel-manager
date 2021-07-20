@@ -14,7 +14,7 @@ import { IPanelConfig } from '../src/types';
 const defaultPanelSize = {
   LTL: { width: '420px', height: 'auto', minWidth: '380px' },
   R: { width: '600px', height: 'auto' },
-  LB: { width: 'auto', height: '300px' },
+  LB: { width: 'auto', height: '300px', maxHeight: '600px' },
 };
 
 const mockPanel: IPanelConfig = {
@@ -38,6 +38,7 @@ const mockPanel: IPanelConfig = {
     resizeConfig: {
       defaultSize: defaultPanelSize.LB,
       minHeight: defaultPanelSize.LB.height,
+      maxHeight: defaultPanelSize.LB.maxHeight,
     }
   },
   LTL: {

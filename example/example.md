@@ -20,12 +20,12 @@ yarn add panel-manager
 
 ## Usage
 
-### 1. Imagine your panels property
+### 1. Imagine your panels prototyping
 
-You can draw your panel property on the paper first, our just imagine it in your head.
+You can draw your panel prototyping on the paper first, our just imagine it in your head.
 
 <details>
-  <summary>demonstrate for property image</summary>
+  <summary>demonstrate for prototyping image</summary>
   <image alt="first step" src="https://gw.alipayobjects.com/mdn/rms_24f06c/afts/img/A*7BdxQoZFjwcAAAAAAAAAAAAAARQnAQ">
   </image>
 </details>
@@ -35,7 +35,7 @@ You can draw your panel property on the paper first, our just imagine it in your
 **⚠️️ Important Note**: Because of the print order: Left, Right, Top, Bottom. You should always make L(R) first.It means you should split panels in the horizontal direction,and then in the vertical direction.
 
 <details>
-  <summary>demonstrate for named property image</summary>
+  <summary>demonstrate for name panel</summary>
   <image alt="second step" src="https://gw.alipayobjects.com/mdn/rms_24f06c/afts/img/A*npNYTLsE54UAAAAAAAAAAAAAARQnAQ">
   </image>
 </details>
@@ -46,7 +46,7 @@ If panels are nest, Named them like *TL(top left)*, *TLB(top left top, means the
 remember the *T* and *L*  alway at the front of the name.
 
 <details>
-  <summary>demonstrate for nest name property</summary>
+  <summary>demonstrate for name nest panels</summary>
   <image alt="third step" src="https://gw.alipayobjects.com/mdn/rms_24f06c/afts/img/A*xaaSQbZuEG4AAAAAAAAAAAAAARQnAQ">
   </image>
 </details>
