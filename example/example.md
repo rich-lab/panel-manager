@@ -126,5 +126,5 @@ export default App;
 ## Motivation
 
 When i was building an online editor, i tried to use the npm package `re-resizable` to create my panels. Like menu, hierarchy, toolbar, etc.
-But when scene become complex, it's hard to manage and code.Case you should create more `Resizable` component to handle every panel.
-So i create this component,it gives you an easy way to manage these panels.
+But when the scene becomes complex, it's hard to manage and code when you should create more `Resizable` component to handle every panel.
+So i create this component which gives you an easy way to manage these panels.
