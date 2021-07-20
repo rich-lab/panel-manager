@@ -2,6 +2,8 @@
 
 Provide an easy way to manage your panels.
 
+https://rich-lab.github.io/panel-manager/
+
 ## Feature
 
 - create panels declartive
