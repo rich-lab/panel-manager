@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - gh-pages
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install
+      run: npm install
+    
+    - name: Build
+      run: npm run build
+
+    - name: GitHub Pages Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
