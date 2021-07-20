@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "GT Walsheim Bold";
+  src: url("//db.onlinewebfonts.com/t/91e0638dac19aba2539d2b8b2a7981e8.eot"); /* IE9*/
+  src: url("//db.onlinewebfonts.com/t/91e0638dac19aba2539d2b8b2a7981e8.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("//db.onlinewebfonts.com/t/91e0638dac19aba2539d2b8b2a7981e8.woff2") format("woff2"), /* chrome firefox */
+  url("//db.onlinewebfonts.com/t/91e0638dac19aba2539d2b8b2a7981e8.woff") format("woff"), /* chrome firefox */
+  url("//db.onlinewebfonts.com/t/91e0638dac19aba2539d2b8b2a7981e8.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+  url("//db.onlinewebfonts.com/t/91e0638dac19aba2539d2b8b2a7981e8.svg#GT Walsheim Bold") format("svg"); /* iOS 4.1- */
+}
+
+
 .example-panel-content {
   display: flex;
   align-items: center;
@@ -33,7 +44,11 @@ div[data-panel-name="LTL"] .name-content {
 }
 
 div[data-panel-name="LTR"] .name-content {
-  animation: nameAnmi1 5s cubic-bezier(0.645, 0.045, 0.355, 1.000) 0s 1;
+  animation: nameAnmi1 10s cubic-bezier(0.645, 0.045, 0.355, 1.000) 0s 1 forwards;
+  background: linear-gradient(45deg, #a875ec 20%, #ff6b7c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100% auto;
 }
 
 div[data-panel-name="LB"] .name-content span {
@@ -45,8 +60,16 @@ div[data-panel-name="LB"] .name-content span {
   0% {
     transform: translateX(-100%);
   }
-  100% {
+  50% {
     transform: translateX(0%);
+  }
+  75% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 50% 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
