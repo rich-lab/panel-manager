@@ -13,19 +13,4 @@ export default defineConfig({
       markdownIt: MarkdownIt({ html: true }).use(markdownItPrism)
     })
   ],
-  build: {
-    lib: {
-      name: 'panelManager',
-      entry: 'src/index.tsx',
-      formats: ['umd', 'cjs']
-    },
-    rollupOptions: {
-      external: ['react'],
-      output: {
-        globals: {
-          react: 'React'
-        }
-      }
-    }
-  }
 });

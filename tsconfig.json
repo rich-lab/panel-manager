@@ -12,10 +12,10 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false,
+    "noEmit": true,
     "jsx": "react",
     "outDir": "es",
     "noImplicitAny": false
   },
-  "include": ["./src", "example/main.tsx"],
+  "include": ["./src", "./example"],
 }
