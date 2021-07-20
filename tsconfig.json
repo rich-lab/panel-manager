@@ -17,5 +17,6 @@
     "outDir": "es",
     "noImplicitAny": false
   },
-  "include": ["./src", "example/main.tsx"],
+  "include": ["./src"],
+  "exclude": ["example"]
 }
