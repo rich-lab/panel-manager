@@ -6,7 +6,7 @@
   "main": "panel-manager.cjs.js",
   "scripts": {
     "dev": "vite",
-    "build": "cp src/index.css es/ tsc && vite build",
+    "build": "cp -rf src/index.css es/ && tsc && vite build",
     "prepublishOnly": "npm run build",
     "serve": "vite preview",
     "lint": "eslint src/**.tsx src/**.ts --fix"
