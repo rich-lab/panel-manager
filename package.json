@@ -4,6 +4,7 @@
   "version": "0.0.6",
   "module": "es/index.js",
   "main": "panel-manager.cjs.js",
+  "types": "es/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "cp -rf src/index.css es/ && tsc && vite build",

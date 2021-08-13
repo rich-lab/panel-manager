@@ -39,6 +39,17 @@ const App = () => <PanelManager config={config} />
 |autoBorder|auto generate panel border|x|`false`|
 |name|cache name, for `localStorage.setItem(name, PANEL_SIZE)`|x|PANEL_MANAGER|
 
+## Custom style
+
+### border
+
+```css
+:root {
+  --panel-manager-border-color: #e4e4e4;  
+  --panel-manager-border--active-color: #1890ff;  
+}
+```
+
 ## Changelog
 
 The changelog can be found on the [Releases page](https://github.com/rich-lab/panel-manager/releases).

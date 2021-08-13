@@ -137,7 +137,7 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
       } else if (config) {
         if (config.resizable) {
           const direction = { [ResizeDriectionMap[name]]: true };
-          const handleClasses = { [ResizeDriectionMap[name]]: `panelManager${name}Handler` };
+          const handleClasses = { [ResizeDriectionMap[name]]: `panel-manager-handler panel-manager-${name}-handler` };
           dataProps['data-panel-resizable'] = true;
 
           const genCacheDimension = (n) => {
