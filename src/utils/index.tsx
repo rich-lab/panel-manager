@@ -215,8 +215,6 @@ export const panelConfigParser = (
 
   const recursiveFunc = genRecursive(panelConfig, rootConfig);
 
-  console.log('panelTree', panelTree);
-
   const nodes = recursiveFunc(panelTree, '');
 
   return nodes;
