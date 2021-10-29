@@ -11,7 +11,6 @@ import './index.css';
 
 type IState = { panels: ReactElement[] };
 class PanelManager extends React.PureComponent<IProps, IState> {
-  // 面板的 ref 保存在这里
   panelRefs: Record<string, Resizable> = {}
   constructor(props: IProps) {
     super(props);
