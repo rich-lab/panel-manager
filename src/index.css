@@ -79,3 +79,11 @@ div[data-panel-type] {
 .panel-manager-R-handler:hover {
   border-left: 2px solid var(--panel-manager-border--active-color);
 }
+
+.panel-manager-transition-width {
+  transition: width .6s ease;
+}
+
+.panel-manager-transition-height {
+  transition: height .6s ease;
+}

@@ -98,7 +98,7 @@ const onResizeStop = ({
   if (cb) (cb as any)();
 };
 
-export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}) => {
+export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}, refs) => {
   return function recursive(rootPanel, chainedLevelName = '') {
     if (!rootPanel) return null;
     let names: any = Object.keys(rootPanel);
@@ -143,7 +143,7 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
           const genCacheDimension = (n) => {
             if (n === 'L' || n === 'R') return 'width';
             if (n === 'T' || n === 'B') return 'height';
-            return '';
+            return 'width';
           };
 
           element = (
@@ -155,6 +155,7 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
               enable={direction}
               key={`rootPanel-${realName}`}
               style={isColumn ? { flexDirection: 'column' } : {}}
+              ref={c => refs[realName] = c}
               onResizeStop={onResizeStop({
                 panelPos: realName,
                 direction: genCacheDimension(name),
@@ -192,6 +193,7 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
 export const panelConfigParser = (
   panelConfig: IPanelConfig,
   rootConfig: ISettings,
+  refs: Record<string, any>,
 ): ReactElement[] => {
   let names = Object.keys(panelConfig);
   const panelTree = {};
@@ -213,7 +215,7 @@ export const panelConfigParser = (
     }
   });
 
-  const recursiveFunc = genRecursive(panelConfig, rootConfig);
+  const recursiveFunc = genRecursive(panelConfig, rootConfig, refs);
 
   const nodes = recursiveFunc(panelTree, '');
 
