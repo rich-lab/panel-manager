@@ -8,7 +8,7 @@ export default defineConfig({
     lib: {
       name: 'panelManager',
       entry: 'src/index.tsx',
-      formats: ['umd', 'cjs']
+      formats: ['umd', 'cjs', 'es']
     },
     rollupOptions: {
       external: ['react'],
