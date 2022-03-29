@@ -65,7 +65,7 @@ const config: IPanelConfig = {
     resizable: true, // make LTT resizable,
     // same as Resizable props, 
     // but panel-manage default set enable and size(if you enable cache prop)
-    resizableConfig: { 
+    resizeConfig: { 
       defaultSize: {
         height: '100px',
         width: 'auto'
@@ -76,7 +76,7 @@ const config: IPanelConfig = {
     // in this example, R panel handles RT and RB panel, and R doesn't have other content
     // so we shouldn't set component field.
     resizable: true, // make R resizable,
-    resizableConfig: {
+    resizeConfig: {
       defaultSize: {
         height: '100%',
         width: '700px'
@@ -84,7 +84,7 @@ const config: IPanelConfig = {
     }
   },
   RT: {
-    component: <div>I'm RT panel!</div>
+    component: <div>I'm RT panel!</div>,
     resizable: true,
     resizableConfig: {
       defaultSize: {
@@ -114,8 +114,8 @@ import panelConfig from './panel-config';
 const App = () => {
   // Note that you MUST set PanelManger's Parent Component size.
   return (
-    <div styles={{ height: '100vh', width: '100vw' }}>
-      <PanelManager config={config} />
+    <div style={{ height: '100vh', width: '100vw' }}>
+      <PanelManager panelConfig={config} />
     </div>
   );
 }
