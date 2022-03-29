@@ -42,7 +42,7 @@ You can draw your panel prototyping on the paper first, our just imagine it in y
 
 
 ### 3. Nest name
-If panels are nest, Named them like *TL(top left)*, *TLB(top left top, means the panel at the top left counter)*
+If panels are nest, Named them like *TL(top left)*, *TLB(top left bottom, means the panel at the top left counter)*
 remember the *T* and *L*  alway at the front of the name.
 
 <details>
