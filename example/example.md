@@ -4,9 +4,9 @@
 
 ## Feature
 
-- create panels declartive
-- auto generate border
-- memorize panel size
+- Create panels declartive
+- Auto generate border
+- Built-in panel size cache
 
 ## Install
 
@@ -26,7 +26,7 @@ You can draw your panel prototyping on the paper first, our just imagine it in y
 
 <details>
   <summary>demonstrate for prototyping image</summary>
-  <image alt="first step" src="https://gw.alipayobjects.com/mdn/rms_24f06c/afts/img/A*7BdxQoZFjwcAAAAAAAAAAAAAARQnAQ">
+  <image alt="first step" src="https://gw.alipayobjects.com/mdn/rms_c67590/afts/img/A*VmtLSaFOAkgAAAAAAAAAAAAAARQnAQ">
   </image>
 </details>
 
@@ -36,7 +36,7 @@ You can draw your panel prototyping on the paper first, our just imagine it in y
 
 <details>
   <summary>demonstrate for name panel</summary>
-  <image alt="second step" src="https://gw.alipayobjects.com/mdn/rms_24f06c/afts/img/A*npNYTLsE54UAAAAAAAAAAAAAARQnAQ">
+  <image alt="second step" src="https://gw.alipayobjects.com/mdn/rms_c67590/afts/img/A*ls64Q7a8VMsAAAAAAAAAAAAAARQnAQ">
   </image>
 </details>
 
@@ -47,7 +47,7 @@ remember the *T* and *L*  alway at the front of the name.
 
 <details>
   <summary>demonstrate for name nest panels</summary>
-  <image alt="third step" src="https://gw.alipayobjects.com/mdn/rms_24f06c/afts/img/A*xaaSQbZuEG4AAAAAAAAAAAAAARQnAQ">
+  <image alt="third step" src="https://gw.alipayobjects.com/mdn/rms_c67590/afts/img/A*XYoSQqscIOEAAAAAAAAAAAAAARQnAQ">
   </image>
 </details>
 
@@ -125,6 +125,6 @@ export default App;
 
 ## Motivation
 
-When i was building an online editor, i tried to use the npm package `re-resizable` to create my panels. Like menu, hierarchy, toolbar, etc.
-But when the scene becomes complex, it's hard to manage and code when you should create more `Resizable` component to handle every panel.
+When I was building an online editor, I tried to use the npm package `re-resizable` to create my panels like menu, hierarchy, toolbar, etc.
+But when the scene become complex, it's hard to manage and code because you should create more `Resizable` component to handle every panel.
 So i create this component which gives you an easy way to manage these panels.
