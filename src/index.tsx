@@ -51,4 +51,6 @@ class PanelManager extends React.PureComponent<IProps, IState> {
   }
 }
 
+export type { IPanelConfig } from "./types"
+
 export default PanelManager;
