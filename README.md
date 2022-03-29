@@ -28,7 +28,7 @@ import type { IPanelConfig } from 'panel-manager';
 
 const config: IPanelConfig = { ... };
 
-const App = () => <PanelManager config={config} />
+const App = () => <PanelManager panelConfig={config} />
 ```
 
 ### Props
