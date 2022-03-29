@@ -27,7 +27,7 @@ var I=Object.defineProperty,P=Object.defineProperties;var _=Object.getOwnPropert
   </image>
 </details>
 <h3>3. Nest name</h3>
-<p>If panels are nest, Named them like <em>TL(top left)</em>, <em>TLB(top left top, means the panel at the top left counter)</em>
+<p>If panels are nest, Named them like <em>TL(top left)</em>, <em>TLB(top left bottom, means the panel at the top left counter)</em>
 remember the <em>T</em> and <em>L</em>  alway at the front of the name.</p>
 <details>
   <summary>demonstrate for name nest panels</summary>
