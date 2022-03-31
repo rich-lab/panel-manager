@@ -1,7 +1,7 @@
 import React from 'react';
 import { Resizable } from 're-resizable';
 
-import { ResizeDriectionMap, PANEL_MANAGER_CACHE_SIZE } from '../constants';
+import { ResizeDriectionMap as ResizeDirectionMap, PANEL_MANAGER_CACHE_SIZE } from '../constants';
 
 import type { IPanelConfig, ISettings } from '../types';
 import type { Size, ResizeCallback } from 're-resizable';
@@ -103,7 +103,7 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
     if (!rootPanel) return null;
     let names: any = Object.keys(rootPanel);
     names = sortNames(names);
-    const childs: any = [];
+    const children: any = [];
     for (let i = 0; i < names.length; i += 1) {
       const name = names[i];
       const realName = `${chainedLevelName}${name}`;
@@ -136,8 +136,8 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
         );
       } else if (config) {
         if (config.resizable) {
-          const direction = { [ResizeDriectionMap[name]]: true };
-          const handleClasses = { [ResizeDriectionMap[name]]: `panel-manager-handler panel-manager-${name}-handler` };
+          const direction = { [ResizeDirectionMap[name]]: true };
+          const handleClasses = { [ResizeDirectionMap[name]]: `panel-manager-handler panel-manager-${name}-handler` };
           dataProps['data-panel-resizable'] = true;
 
           const genCacheDimension = (n) => {
@@ -184,9 +184,9 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
         }
       }
 
-      childs.push(element);
+      children.push(element);
     }
-    return childs;
+    return children;
   };
 };
 
