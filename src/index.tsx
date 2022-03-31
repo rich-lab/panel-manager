@@ -1,4 +1,5 @@
 import React from 'react';
+import { Resizable } from 're-resizable';
 
 import { panelConfigParser } from './utils';
 import { defaultRootSize } from './constants';
@@ -10,16 +11,16 @@ import './index.css';
 
 type IState = { panels: ReactElement[] };
 class PanelManager extends React.PureComponent<IProps, IState> {
-
+  panelRefs: Record<string, Resizable> = {}
   constructor(props: IProps) {
     super(props);
     const { panelConfig, ...rest } = this.props;
-    const panels = panelConfigParser(panelConfig, rest);
+    const panels = panelConfigParser(panelConfig, rest, this.panelRefs);
     this.state = { panels };
   }
 
   UNSAFE_componentWillReceiveProps(nextProps: IProps) {
-    const panels = panelConfigParser(nextProps.panelConfig, nextProps);
+    const panels = panelConfigParser(nextProps.panelConfig, nextProps, this.panelRefs);
     this.setState({ panels });
   }
 
@@ -49,5 +50,7 @@ class PanelManager extends React.PureComponent<IProps, IState> {
     );
   }
 }
+
+export type { IPanelConfig } from "./types"
 
 export default PanelManager;

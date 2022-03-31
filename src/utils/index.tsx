@@ -1,7 +1,7 @@
 import React from 'react';
 import { Resizable } from 're-resizable';
 
-import { ResizeDriectionMap, PANEL_MANAGER_CACHE_SIZE } from '../constants';
+import { ResizeDirectionMap, PANEL_MANAGER_CACHE_SIZE } from '../constants';
 
 import type { IPanelConfig, ISettings } from '../types';
 import type { Size, ResizeCallback } from 're-resizable';
@@ -98,12 +98,12 @@ const onResizeStop = ({
   if (cb) (cb as any)();
 };
 
-export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}) => {
+export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}, refs) => {
   return function recursive(rootPanel, chainedLevelName = '') {
     if (!rootPanel) return null;
     let names: any = Object.keys(rootPanel);
     names = sortNames(names);
-    const childs: any = [];
+    const children: any = [];
     for (let i = 0; i < names.length; i += 1) {
       const name = names[i];
       const realName = `${chainedLevelName}${name}`;
@@ -136,15 +136,17 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
         );
       } else if (config) {
         if (config.resizable) {
-          const direction = { [ResizeDriectionMap[name]]: true };
-          const handleClasses = { [ResizeDriectionMap[name]]: `panelManager${name}Handler` };
+          const direction = { [ResizeDirectionMap[name]]: true };
+          const handleClasses = { [ResizeDirectionMap[name]]: `panel-manager-handler panel-manager-${name}-handler` };
           dataProps['data-panel-resizable'] = true;
 
           const genCacheDimension = (n) => {
             if (n === 'L' || n === 'R') return 'width';
             if (n === 'T' || n === 'B') return 'height';
-            return '';
+            return 'width';
           };
+
+          const style = config.resizeConfig?.style ?? {};
 
           element = (
             <Resizable
@@ -154,7 +156,8 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
               defaultSize={genRealSize(config.resizeConfig?.defaultSize, realName, rootConfig)}
               enable={direction}
               key={`rootPanel-${realName}`}
-              style={isColumn ? { flexDirection: 'column' } : {}}
+              style={isColumn ? { flexDirection: 'column', ...style } : style}
+              ref={c => refs[realName] = c}
               onResizeStop={onResizeStop({
                 panelPos: realName,
                 direction: genCacheDimension(name),
@@ -183,15 +186,16 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
         }
       }
 
-      childs.push(element);
+      children.push(element);
     }
-    return childs;
+    return children;
   };
 };
 
 export const panelConfigParser = (
   panelConfig: IPanelConfig,
   rootConfig: ISettings,
+  refs: Record<string, any>,
 ): ReactElement[] => {
   let names = Object.keys(panelConfig);
   const panelTree = {};
@@ -213,9 +217,7 @@ export const panelConfigParser = (
     }
   });
 
-  const recursiveFunc = genRecursive(panelConfig, rootConfig);
-
-  console.log('panelTree', panelTree);
+  const recursiveFunc = genRecursive(panelConfig, rootConfig, refs);
 
   const nodes = recursiveFunc(panelTree, '');
 

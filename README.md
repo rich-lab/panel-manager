@@ -28,7 +28,7 @@ import type { IPanelConfig } from 'panel-manager';
 
 const config: IPanelConfig = { ... };
 
-const App = () => <PanelManager config={config} />
+const App = () => <PanelManager panelConfig={config} />
 ```
 
 ### Props
@@ -38,6 +38,17 @@ const App = () => <PanelManager config={config} />
 |disableCache|disble cache panel size feature|x|`false`|
 |autoBorder|auto generate panel border|x|`false`|
 |name|cache name, for `localStorage.setItem(name, PANEL_SIZE)`|x|PANEL_MANAGER|
+
+## Custom style
+
+### border
+
+```css
+:root {
+  --panel-manager-border-color: #e4e4e4;  
+  --panel-manager-border--active-color: #1890ff;  
+}
+```
 
 ## Changelog
 
