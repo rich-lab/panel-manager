@@ -1,4 +1,4 @@
-export const ResizeDriectionMap = {
+export const ResizeDirectionMap = {
   R: 'left',
   L: 'right',
   T: 'bottom',

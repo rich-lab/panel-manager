@@ -1,7 +1,7 @@
 import React from 'react';
 import { Resizable } from 're-resizable';
 
-import { ResizeDriectionMap as ResizeDirectionMap, PANEL_MANAGER_CACHE_SIZE } from '../constants';
+import { ResizeDirectionMap, PANEL_MANAGER_CACHE_SIZE } from '../constants';
 
 import type { IPanelConfig, ISettings } from '../types';
 import type { Size, ResizeCallback } from 're-resizable';
