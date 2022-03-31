@@ -146,6 +146,8 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
             return 'width';
           };
 
+          const style = config.resizeConfig?.style ?? {};
+
           element = (
             <Resizable
               {...dataProps}
@@ -154,7 +156,7 @@ export const genRecursive = (rawConfig: IPanelConfig, rootConfig: ISettings = {}
               defaultSize={genRealSize(config.resizeConfig?.defaultSize, realName, rootConfig)}
               enable={direction}
               key={`rootPanel-${realName}`}
-              style={isColumn ? { flexDirection: 'column' } : {}}
+              style={isColumn ? { flexDirection: 'column', ...style } : style}
               ref={c => refs[realName] = c}
               onResizeStop={onResizeStop({
                 panelPos: realName,
