@@ -1,25 +1,25 @@
 :root {
-  --panel-manager-border-color: #e4e4e4;
-  --panel-manager-border--active-color: #1890ff;
+  --panel-manager-border-color: #e4e4e4;  
+  --panel-manager-border--active-color: #1890ff;  
 }
 
-div.resizable-default-border[data-panel-resizable="true"][data-panel-type="L"] {
+div.resizable-default-border[data-panel-resizable='true'][data-panel-type='L'] {
   border-right: 1px solid var(--panel-manager-border-color);
 }
 
-div.resizable-default-border[data-panel-resizable="true"][data-panel-type="T"] {
+div.resizable-default-border[data-panel-resizable='true'][data-panel-type='T'] {
   border-bottom: 1px solid var(--panel-manager-border-color);
 }
 
-div.resizable-default-border[data-panel-resizable="true"][data-panel-type="B"] {
+div.resizable-default-border[data-panel-resizable='true'][data-panel-type='B'] {
   border-top: 1px solid var(--panel-manager-border-color);
 }
 
-div.resizable-default-border[data-panel-resizable="true"][data-panel-type="R"] {
+div.resizable-default-border[data-panel-resizable='true'][data-panel-type='R'] {
   border-left: 1px solid var(--panel-manager-border-color);
 }
 
-div[data-panel-resizable="false"] {
+div[data-panel-resizable='false'] {
   flex: 1;
 }
 
@@ -82,9 +82,9 @@ div[data-panel-type] {
 }
 
 .panel-manager-transition-width {
-  transition: width 0.6s ease;
+  transition: width .6s ease;
 }
 
 .panel-manager-transition-height {
-  transition: height 0.6s ease;
+  transition: height .6s ease;
 }
