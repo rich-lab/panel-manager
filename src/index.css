@@ -26,6 +26,7 @@ div[data-panel-resizable='false'] {
 div.panel-content-container {
   display: block !important;
   flex: 1;
+  max-width: 100%;
 }
 
 div[data-panel-type] {
