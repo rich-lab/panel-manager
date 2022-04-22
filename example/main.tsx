@@ -14,7 +14,7 @@ const defaultPanelSize = {
 
 const mockPanel = {
   R: {
-    component: <div className="example-panel-content">Right Panel</div>,
+    component: <div className="example-panel-content">Right Panel name</div>,
     resizable: true,
     resizeConfig: {
       defaultSize: defaultPanelSize.R,
