@@ -4,13 +4,13 @@ Provide an easy way to manage your panels.
 
 https://rich-lab.github.io/panel-manager/
 
-## Feature
+## Features
 
-- create panels declartive
-- auto generate border
-- memorize panel size
+- Create panels declaratively
+- Generate border automatically
+- Memorize panel sizes
 
-## Install
+## Installation
 
 ```bash
 npm install panel-manager --save
