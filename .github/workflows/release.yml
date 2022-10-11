@@ -31,5 +31,5 @@ jobs:
           DINGDING_ACCESS_TOKEN: ${{ secrets.DINGDING_ACCESS_TOKEN }}
         with:
           title: Release Note ${{ github.event.release.tag_name }}
-          text:  ${{ toJSON('# Release Note') }} ${{ github.event.release.tag_name }} \r\n ${{ toJSON(github.event.release.body) }}
+          text: ${{ toJSON(github.event.release.body) }}
       
